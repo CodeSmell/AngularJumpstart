@@ -7,7 +7,7 @@ exports.config = {
 	// Spec patterns are relative to the configuration file location
 	specs : [ 'js/*/*.spec.js' ],
 	
-	baseUrl: 'http://localhost:8080/Angular101/',
+	baseUrl: 'http://localhost:8080/AngularJumpstart/',
 	
 	capabilities: {
 		  'browserName': 'phantomjs',
