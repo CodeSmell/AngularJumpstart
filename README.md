@@ -2,6 +2,38 @@
 This is a template to jump start a JavaScript / AngularJS project in Eclipse IDE.
 This was put together after reading numerous blogs and forums. 
 
+The project structure is modeled after a Maven project
+
+```
+src
+---- main
+-------- java 
+-------- resources
+------------ karma.conf.js
+-------- webapp
+------------ WEB-INF
+---------------- web.xml
+------------ lib (third party js) 
+------------ js
+---------------- hello.js
+------------ TheBasics.html
+
+---- test (unit tests)
+-------- java
+-------- js
+------------ hello_test.js
+
+---- e2e (end to end tests)
+-------- js
+------------ TheBasics.po.js
+------------ TheBasics.spec.js
+-------- protractor.conf.js
+
+package.json
+pom.xml
+
+``` 
+
 # Git and Eclipse
 Create a folder for the Git repositories outside of the Eclipse workspace. 
 If the Eclipse workspace is c:\workspace use something like this:
@@ -60,7 +92,7 @@ This will create a `node_modules` folder, which was added to _.gitignore_.
 
 Create a file name: `karma.conf.js` (already created).
 
-# Running Tests
+# Running JavaScript Unit Tests
 ## From the Command Line
 Install the karma cmd line
 
@@ -80,3 +112,4 @@ Then run the test goals:
 Under the target folder there will be junit XML test reports.
 In Eclipse, you can double-click them to see the results of the tests in the JUnit view.
 
+# Running Angular E2E Tests
