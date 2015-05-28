@@ -35,6 +35,8 @@ pom.xml
 ``` 
 
 # Git and Eclipse
+
+## Clone Git 
 Create a folder for the Git repositories outside of the Eclipse workspace. 
 If the Eclipse workspace is c:\workspace use something like this:
 
@@ -44,18 +46,19 @@ Use Git Bash to clone this project into the local directory for Git (created abo
 
 	git clone https://github.com/CodeSmell/AngularJumpstart.git
 
-
+## Manage Git from Eclipse
 Use eGit in Eclipse and choose the _add an existing local Git repository to this view_ option.
 Specify the directory where the Git project was cloned.
 
 	c:\dev\sandbox\AngularJumpstart
 
+## Create Eclipse project for Git repo
 In Eclipse, right click on the newly created repository in the Git Repository view.
 * choose Import Project... and then select New Project Wizard
 * choose the appropriate project (Static Web Project)
 * make sure that you set the project location to the directory where the Git project was cloned 
 
-# Configure the Eclipse project 
+## Configure the Eclipse project 
 Install the Angular JS Eclipse plugin via Eclipse Marketplace
 
 In Eclipse, right click on the project and choose the _Configure | Convert to AngularJS project_ menu option 
