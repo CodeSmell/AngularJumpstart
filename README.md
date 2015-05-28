@@ -1,6 +1,6 @@
 # AngularJumpstart
 This is a template to jump start a JavaScript / AngularJS project in Eclipse IDE.
-This was put together after reading numerous blogs and forums. 
+This was put together after reading numerous blogs and forums. I figured it would be helpful to have a template for new projects.  
 
 The project structure is modeled after a Maven project
 
@@ -9,7 +9,6 @@ src
 ---- main
 -------- java 
 -------- resources
------------- karma.conf.js
 -------- webapp
 ------------ WEB-INF
 ---------------- web.xml
@@ -22,6 +21,7 @@ src
 -------- java
 -------- js
 ------------ hello_test.js
+-------- karma.conf.js
 
 ---- e2e (end to end tests)
 -------- js
@@ -68,7 +68,7 @@ Then choose the _Configure | Convert to Maven project_ menu option
 Download and install [Node.js](https://nodejs.org/)
 
 
-Create a file name: `package.json`  (already created) 
+Create a file named `package.json` in the root directory (already created). 
 
 ```
     {
@@ -92,7 +92,7 @@ npm install karma-html-reporter --save-dev
 
 This will create a `node_modules` folder, which was added to _.gitignore_. 
 
-Create a file name: `karma.conf.js` (already created).
+Create a file named `karma.conf.js` in the test folder (already created).
 
 # Running JavaScript Unit Tests
 ## From the Command Line
@@ -102,7 +102,7 @@ Install the karma cmd line
 
 From the command line navigate to the project root directory and run this:
 	
-	karma start src/main/resources/karma.conf.js
+	karma start src/test/karma.conf.js
 
 ## From Maven
 Add the [maven-karma plugin](https://github.com/karma-runner/maven-karma-plugin) to POM.xml (already done). 

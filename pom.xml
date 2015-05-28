@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>AngularJumpstart</groupId>
+  <artifactId>AngularJumpstart</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+	<properties>
+		<karma-file>src/test/karma.conf.js</karma-file>
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<!-- 
+				https://github.com/karma-runner/maven-karma-plugin 
+				-->
+				<groupId>com.kelveden</groupId>
+				<artifactId>maven-karma-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<phase>test</phase>
+						<id>runTests</id>
+						<goals>
+							<goal>start</goal>
+						</goals>
+						<configuration>
+							<configFile>${karma-file}</configFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archiveClasses>false</archiveClasses>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>			
+		</plugins>
+	</build>  
+</project>
