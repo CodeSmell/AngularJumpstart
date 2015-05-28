@@ -74,7 +74,7 @@ Create a file name: `package.json`  (already created)
     }
 ```
 
-Install karma (unit test runner). 
+Install karma (unit test runner) to run our Jasmine tests. 
 Navigate to the project root directory and run these commands:
 
 ```
@@ -112,3 +112,36 @@ Under the target folder there will be junit XML test reports.
 In Eclipse, you can double-click them to see the results of the tests in the JUnit view.
 
 # Running Angular E2E Tests
+Once we get the basics going, which are not specific to Angular, we will want to run and test our Angular views.
+[Protractor](https://angular.github.io/protractor/#/) is a framework, that uses Jasmine, and is intended to run end to end or integration tests.
+
+Install Protractor
+```
+npm install -g protractor
+npm install jasmine-reporters --save-dev
+npm install phantomjs --save-dev
+```
+
+Install WebDriver
+```
+webdriver-manager update
+```
+
+Create a file: `protractor.conf.js` (already created).
+
+## Running Protractor from the Command Line
+In Eclipse run the Web Server with the project 
+
+Start up the Selenium server 
+```
+webdriver-manager start
+```
+
+From the command line, navigate to the root folder of project & run
+```
+protractor src/e2e/protractor.conf.js
+```
+
+## Test reports
+Under the target folder there will be junit XML test reports.
+In Eclipse, you can double-click them to see the results of the tests in the JUnit view.
