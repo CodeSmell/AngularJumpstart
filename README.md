@@ -62,9 +62,8 @@ In Eclipse, right click on the project and choose the _Configure | Convert to An
 Then choose the _Configure | Convert to Maven project_ menu option
 
 # Getting a project ready for JavaScript unit testing
-Download and install nodeJS
+Download and install [Node.js](https://nodejs.org/)
 
-	https://nodejs.org/
 
 Create a file name: `package.json`  (already created) 
 
@@ -103,7 +102,7 @@ From the command line navigate to the project root directory and run this:
 	karma start src/main/resources/karma.conf.js
 
 ## From Maven
-Add the maven-karma plugin to POM.xml (already done). 
+Add the [maven-karma plugin](https://github.com/karma-runner/maven-karma-plugin) to POM.xml (already done). 
 Then run the test goals: 
 	
 	mvn clean test
