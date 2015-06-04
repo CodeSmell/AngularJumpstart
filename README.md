@@ -2,7 +2,9 @@
 This is a template to jump start a JavaScript / AngularJS project in Eclipse IDE.
 This was put together after reading numerous blogs and forums. I figured it would be helpful to have a template for new projects.  
 
-The project structure is modeled after a Maven project
+The project structure is modeled after a Maven project and the suggestions on the AngularJS blog ([link](http://angularjs.blogspot.com/2014/02/an-angularjs-style-guide-and-best.html), [link2](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub))
+
+The LinkManager is based on the AngularJS sample titled "Wire up a Backend" on the AngularJS home page. It has been modified to use [AngularUI](https://angular-ui.github.io/). In addition AngularFire and Firebase were removed.  
 
 ```
 src
@@ -15,18 +17,31 @@ src
 ------------ lib (third party js) 
 ------------ js
 ---------------- hello.js
------------- TheBasics.html
+------------ Basic
+---------------- TheBasics.html
+------------ LinkManager
+---------------- index.html
+---------------- list.html
+---------------- detail.html
+---------------- LinkManagerApp.js
+---------------- LinkManagerService.js
 
 ---- test (unit tests)
 -------- java
 -------- js
 ------------ hello_test.js
+------------ LinkManager
+---------------- TODO
+---------------- LinkManagerService_test.js
 -------- karma.conf.js
 
 ---- e2e (end to end tests)
 -------- js
------------- TheBasics.po.js
------------- TheBasics.spec.js
+------------ Basic
+---------------- TheBasics.po.js
+---------------- TheBasics.spec.js
+------------ LinkManager
+---------------- TODO
 -------- protractor.conf.js
 
 package.json
@@ -109,6 +124,9 @@ Add the [maven-karma plugin](https://github.com/karma-runner/maven-karma-plugin)
 Then run the test goals: 
 	
 	mvn clean test
+
+## From Eclipse
+The files `HelloSpecRunner.html` and `LinkManagerSpecRunner.html` can be used to run Jasmine tests with Karma. Just open the files in Eclipse using the `Open With | Web Browser` option.
 
 ## Test reports
 Under the target folder there will be junit XML test reports.

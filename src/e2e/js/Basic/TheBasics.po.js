@@ -6,7 +6,7 @@ var AngularBasics = function() {
   this.greeting = element(by.binding('yourName'));
 
   this.get = function() {
-    browser.get('TheBasics.html');
+    browser.get('Basic/TheBasics.html');
   };
 
   this.typeName = function(name) {
