@@ -1,6 +1,5 @@
 app.service('Projects', function() {
 
-	// mock data
 	this.projectsArray = [
 	     		        {
 	     		           id: '10',
