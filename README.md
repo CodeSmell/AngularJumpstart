@@ -23,7 +23,7 @@ src
 ---------------- index.html
 ---------------- list.html
 ---------------- detail.html
----------------- LinkManagerApp.js
+---------------- LinkManagerApp_EditProjectController_test.js
 ---------------- LinkManagerService.js
 
 ---- test (unit tests)
@@ -31,7 +31,7 @@ src
 -------- js
 ------------ hello_test.js
 ------------ LinkManager
----------------- TODO
+---------------- LinkManagerApp_test.js
 ---------------- LinkManagerService_test.js
 -------- karma.conf.js
 

@@ -4,8 +4,15 @@ module.exports = function ( config ) {
         basePath         : '../../',
         frameworks       : ['jasmine'],
         files            : [
+            'src/main/webapp/lib/angular/angular.js',
+            'src/main/webapp/lib/angular/angular-mocks.js',
+            'src/main/webapp/lib/angular/angular-route.js',
+            'src/main/webapp/lib/angular/angular-resource.js',   
+            
             'src/main/webapp/js/**/*.js',
-            'src/test/js/**/*.js'
+            'src/test/js/**/*.js',
+            
+            'src/main/webapp/LinkManager/**/*.js'
         ],
         exclude          : [],
         preprocessors    : {

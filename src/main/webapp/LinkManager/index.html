@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- Example from AngularJS site -->
+<html ng-app="LinkManagerApp">
+	<head>
+		<!-- bootstrap meta tags -->
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">	
+		
+		<title>AngularJS 101</title>
+		
+		<!-- 3rd party css -->
+		<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<a href="https://angularjs.org/"><img src="../images/angular-js-icon.jpg" style="height: 82px; width: 88px; "></a>
+	    		<b style="font-size: 200%">JavaScript Projects</b>
+				<p class="lead">Modified version of AngularJS sample app: Wire up a Backend</p>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<!--  include the template of the current route  -->
+				<div class="col-md-6" ng-view></div>
+	    	</div>
+		</div>
+		<!-- 3rd party scripts -->
+		<script src="../lib/angular/angular.js"></script>
+		<script src="../lib/angular/angular-resource.js"></script>
+		<script src="../lib/angular/angular-route.js"></script>
+		<!-- 
+			Convention says that Angular projects should not add the full jQuery library 
+			but bootstrap needs jQuery so we are using ui-bootstrap
+		-->
+		<script src="../lib/ui-bootstrap/ui-bootstrap-tpls-0.13.0.min.js"></script>
+		<!-- our custom scripts  -->
+		<script src="LinkManagerApp.js"></script>
+		<script src="LinkManagerService.js"></script>
+  	</body>
+</html>
